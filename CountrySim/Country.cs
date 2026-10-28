@@ -30,7 +30,15 @@ namespace CountrySim
 
         public void Build(City city, Building building)
         {
-            int extraSlots = Government == "Democracy" ? 4 : 0;
+            int extraSlots = 0
+            if(Government == "Democracy")
+            {
+                extraSlots = 4;
+            }
+            else
+            {
+                extraSlots = 0;
+            }
 
             if (Money >= building.Price &&
                 city.Buildings.Count < city.Slots() + extraSlots)

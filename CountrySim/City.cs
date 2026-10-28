@@ -27,8 +27,14 @@ namespace CountrySim
 
         public int Slots()
         {
-            if (Size == "Small") return 12;
-            if (Size == "Medium") return 20;
+            if (Size == "Small")
+            {
+                return 12;
+            }
+            if (Size == "Medium")
+            {
+                return 20;
+            }
             return 36;
         }
 
