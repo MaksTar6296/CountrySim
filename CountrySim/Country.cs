@@ -76,8 +76,7 @@ namespace CountrySim
                 if (city.Happiness > 0)
                 {
                     double multiplier = Government == "Monarchy" ? 1.25 : 1;
-                    taxes += city.Population / 1000.0 * 10
-                        * city.Tax / 100.0 * multiplier;
+                    taxes += city.Population / 100.0 * city.Tax / 100.0 * multiplier;
                 }
 
                 if (enoughFood && city.Happiness > 0)
